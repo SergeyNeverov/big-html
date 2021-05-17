@@ -1,0 +1,35 @@
+include ../product/index
+
+mixin products(data)
+    section.section.section_m160.products
+        .container
+            .section__top
+                h2.section__title=data.title
+                a(href="").section__link
+                    .section__link-decore
+                        +svg({
+                            name: 'chevron',
+                            size: [8, 12]
+                        }) 
+                    span.section__link-title Больше товаров
+            .section__wrapper
+                ul(class=`products__list ${data.class ? ' products__list_'+data.class : ''} ${data.scroll ? 'products__list_scroll' : '' }`)
+                    if(data.banner)
+                        //- баннер до товаров
+                        li.products__item
+                            .banner-vertical(style="height: 678px; width: 100%; background: #333; display:flex; justify-content: center; align-items:center;")
+                                span(style="color: #fff; font-size: 48px;") Баннер
+                    each item in data.items
+                        li.products__item
+                            //- карточки товаров
+                            +product(item)
+                    if(data.button)
+                        //- кнопка показать еще
+                        li.products__item
+                            a(href="/").products__button
+                                .products__button-decore
+                                    +svg({
+                                        name: 'chevron',
+                                        size: [8, 12]
+                                    })
+                                span.products__button-title Посмотреть больше товаров              

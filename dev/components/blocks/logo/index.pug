@@ -1,0 +1,7 @@
+mixin logo(data)
+    a(href="/").logo
+        .logo__image
+            if(data == 'dark')
+                img(src="/img/logo-dark.svg ", alt="БигЦентр.РФ")
+            else
+                img(src="/img/logo-white.svg ", alt="БигЦентр.РФ")    

@@ -1,0 +1,9 @@
+.product-gallery
+    ul.product-gallery__list
+        li.product-gallery__item.w100
+            a(href="/pictures/big.jpg" style=`background-image:url('/pictures/big.jpg')`).product-gallery__link
+        - let i = 1;
+            while i < 6
+                li.product-gallery__item
+                    -i++
+                    a(href=`/pictures/small${i}.jpg` style=`background-image:url('/pictures/small${i}.jpg')`).product-gallery__link

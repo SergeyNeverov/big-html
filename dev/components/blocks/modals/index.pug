@@ -1,0 +1,15 @@
+.modal.modal-cart(data-modal="cart")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        }) 
+    .modal__wrapper
+        p.modal__title Товар добавлен в корзину
+        .modal__body
+            .modal__image
+                img(src="/pictures/2.png", alt="")
+            .modal__text
+                .modal__subtitle  Шина MAXTIRES 17.5-25 G-2/L-2 (клюшка) 24PR
+                .modal__prices
+                    .modal__old-price 29 990 ₽
+                    .modal__price 25 990 ₽

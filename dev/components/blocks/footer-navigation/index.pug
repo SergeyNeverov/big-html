@@ -1,0 +1,26 @@
+- 
+    const footerLinks = [
+        {
+            title: 'Каталог',
+            links: ['Спецтехника', 'Запчасти', 'Шины', 'Двигатели', 'Фильтры', 'ГСМ']
+        },
+        {
+            title: 'О компании',
+            links: ['О компании', 'БигЖурнал', 'БигTube', 'Сотрудничество', 'Контакты']
+        },
+        {
+            title: 'Покупателям',
+            links: ['Доставка и оплата', 'Гарантия', 'Лизинг и кредит']
+        }
+    ]
+
+nav.footer-navigation
+    .footer-navigation__wrapper
+        each item in footerLinks
+            .footer-navigation__block
+                p.footer-navigation__title=item.title 
+                ul.footer-navigation__list
+                    each link in item.links
+                        li.footer-navigation__item
+                            a(href="/").footer-navigation__link=link 
+    

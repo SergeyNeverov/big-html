@@ -1,0 +1,39 @@
+.footer-navigation {
+    &__wrapper {
+        display: flex;
+
+    }
+    &__list {
+        .list-reset;
+    }
+    &__block {
+        margin-right: 8.5%;
+        &:nth-child(2) {
+            margin-right: 5%;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__title {
+        margin:  0 0 32px 0;
+        .titleSubsection1;
+    }
+    &__item {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__link {
+        color: #666;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        .transitionFirst;
+        &:hover {
+            color: @firstColor;
+        }
+    }
+}

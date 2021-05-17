@@ -1,0 +1,129 @@
+.catalog {
+    &__container {
+        .grid-2fr-d;
+    }
+    &__filter {
+        min-width: 370px;
+    }
+    &__list {
+        .list-reset;
+        .grid-3fr-res; 
+        margin-top: 32px;
+        &_block {
+            display: block;
+            li {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__listing-top {
+        display: flex;
+        flex-direction: column;
+    }
+    &__sort {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__sort-list {
+        .list-reset;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    &__toggle {
+        display: flex;
+        align-items: center;
+        &-decore {
+            width: 100%;
+            background: currentColor;
+            height: 5px;
+            margin-bottom: 4px;
+            .transitionSecond;
+        }
+        &-button {
+            display: flex;
+            flex-wrap: wrap;
+            width: 30px;
+            margin-left: 24px;
+            color: #E0E0E0;
+            .transitionSecond;
+            &_square {
+                justify-content: space-between;
+                span {
+                    width: 13px;
+                }
+            }
+            &.active {
+                color: @firstColor;
+            }
+            &:hover {
+                color: @firstColor;
+            }
+        }
+    }
+    &__sort-item {
+        margin-right: 5%;
+    }
+    &__sort-link {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        opacity: 0.6;
+        font-family: @font1;
+        .transitionSecond;
+        svg {
+            display: none;
+            height: 0;
+            width: 0;
+            stroke: #000;
+        }
+        &.active {
+            opacity: 1;
+            svg {
+                height: 16px;
+                width: 16px;
+                margin-left: 8px;
+                display: inline-block;
+            }
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__tags {
+        margin-top: 5%;
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            .list-reset;
+        }
+        &-item {
+            margin-right: 40px;
+        }
+    }
+    &-tag {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #000;
+        opacity: 0.6;
+        border: 1px solid currentColor;
+        .transitionSecond;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: bold;
+        &:hover {
+            opacity: 1;
+        }
+        &.active {
+            opacity: 1;
+        }
+    }
+}

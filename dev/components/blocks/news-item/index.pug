@@ -1,0 +1,18 @@
+mixin newsItem(data)
+    a(href="/").news-item
+        p.news-item__title=data.title
+        p.news-item__text Мы представляем надежные и доступные фронтальные погрузчики AMUR, которые отлично зарекомендовали себя в России.
+        .news-item__bottom
+            span.news-item__date=data.date 
+            .news-item__tag
+                +svg({
+                    name: 'tag',
+                    size: [24, 24]
+                })
+                span=data.tag
+            .news-item__count
+                +svg({
+                    name: 'eye',
+                    size: [24, 17]
+                })
+                span=data.count

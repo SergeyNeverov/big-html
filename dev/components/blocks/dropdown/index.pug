@@ -1,0 +1,11 @@
+mixin dropdown(data)
+    .dropdown
+        .dropdown__title=data.title
+            span(data-append-to="")
+            +svg({
+                name: 'dots'
+            })
+        ul.dropdopwn__list
+            each item in data.item
+                li.dropdown__item
+                    a(href="javascript:void(0);" data-append-from="").dropdown__link=item

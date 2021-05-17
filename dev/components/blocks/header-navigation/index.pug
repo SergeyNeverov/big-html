@@ -1,0 +1,7 @@
+mixin headerNavigation(data)
+    nav.header-navigation
+        ul.header-navigation__list
+            each item in data
+                li.header-navigation__item
+                    a(href="#" class=`header-navigation__link ${item.white ? 'header-navigation__link_white' : ''} ${item.selected ? 'header-navigation__link_selected' : ''}`) 
+                        span=item.title

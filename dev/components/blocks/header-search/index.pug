@@ -1,0 +1,11 @@
+.header-search
+    form(action='/search/').header-search__wrapper        
+            input(type="text" placeholder="Что вы ищите?" name="q").fi.header-search__input
+            .header-search__icon
+                +svg({
+                    name: 'photo'
+                })
+            button(type="submit").button.button_search
+                +svg({
+                    name: 'search'
+                })       

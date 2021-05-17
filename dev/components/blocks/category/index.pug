@@ -1,0 +1,5 @@
+mixin category(data)
+    a(href="/").category
+        .category__image
+            img(src=`/pictures/${data.img}.png`, alt="")
+        span.category__title=data.title    

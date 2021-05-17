@@ -1,0 +1,30 @@
+-
+    const social = [
+        {
+          icon: 'inst',
+          name: 'Instagram'
+        },
+        {
+            icon: 'yt',
+            name: 'YouTube'
+        },
+        {
+            icon: 'tel',
+            name: 'Telegram'
+        },
+        {
+            icon: 'ws',
+            name: 'WhatsApp'
+        }
+    ]
+
+.social
+    ul.social__list
+        each icon in social 
+            li.social__item
+                a(href="/").social__link
+                    div(class=`social__icon social__icon_${icon.name.toLowerCase()}`)
+                        +svg({
+                            name: icon.icon
+                        })
+                    span=icon.name 

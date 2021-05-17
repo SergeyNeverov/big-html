@@ -1,0 +1,124 @@
+include ../product/index
+include ../product/wide
+-
+    items = [
+            {
+                img: '2.png',
+                title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                availability: true,
+                price: '25 990 ₽',
+                oldPrice: '29 990 ₽',
+                bonus: '+ 255 бонусов'
+            }, 
+            {
+                img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'           
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            },
+              {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            },
+              {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            }
+    ] 
+
+section.catalog
+    .container
+        .catalog__container
+            aside.catalog__filter
+                include ../filter/index
+            .catalog__listing
+                .catalog__listing-top
+                    .catalog__sort
+                        ul.catalog__sort-list
+                            li.catalog__sort-item.active
+                                a(href="/").catalog__sort-link.active
+                                    span По цене
+                                    +svg({
+                                        name: 'sort'
+                                    })
+                            li.catalog__sort-item
+                                a(href="/").catalog__sort-link
+                                    span По новизне
+                                    +svg({
+                                        name: 'sort'
+                                    }) 
+                            li.catalog__sort-item
+                                a(href="/").catalog__sort-link.active
+                                    span По скидке
+                                    +svg({
+                                        name: 'sort'
+                                    })
+                        .catalog__toggle
+                            a(href="javascript:void(0)").catalog__toggle-button.active
+                                span.catalog__toggle-decore 
+                                span.catalog__toggle-decore
+                            a(href="javascript:void(0)").catalog__toggle-button.catalog__toggle-button_square
+                                span.catalog__toggle-decore 
+                                span.catalog__toggle-decore
+                                span.catalog__toggle-decore 
+                                span.catalog__toggle-decore       
+                    .catalog__tags
+                        ul.catalog__tags-list
+                            li.catalog__tags-item
+                                a(href="/").catalog-tag.active 20.5-70/16 
+                            li.catalog__tags-item
+                                a(href="/").catalog-tag 20.5-70/16 
+                            li.catalog__tags-item
+                                a(href="/").catalog-tag.active 20.5-70/16 
+                            li.catalog__tags-item
+                                a(href="/").catalog-tag 20.5-70/16 
+                            li.catalog__tags-item
+                                a(href="/").catalog-tag 20.5-70/16
+                .catalog__listing-body
+                    ul.catalog__list.catalog__list_block
+                        each data in items
+                            li.catalog__item
+                                +productWide(data)
+                include ../pages/index         

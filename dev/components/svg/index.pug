@@ -1,0 +1,9 @@
+include ../global.pug
+
+mixin svg(data)
+    -if (data.size)
+        svg(width=data.size[0] height=data.size[1])
+            use(xlink:href=global.paths.icons()+'#svg-'+data.name)
+    - else
+        svg
+            use(xlink:href=global.paths.icons()+'#svg-'+data.name)

@@ -1,0 +1,86 @@
+include ../tabs/index
+include ../video/index
+-
+    const tabsVideos = [
+        {
+            name: 'Обзоры техники',
+            video: true,
+            active: true,
+            id: 1
+        },
+        {
+            name: 'Промо',
+            video: true,
+            id: 2
+        },
+        {
+           name: 'Новинки',
+           video: true,
+           id: 3
+        }
+    ]
+    const videos = [
+        {
+            title: 'Как выбрать погрузчик',
+            time: '1:45',
+            image: 1
+        },
+        {
+            title: 'Фронтальный погрузчик Runmax 972E',
+            time: '2:08',
+            image: 2
+        },
+        {
+            title: 'Как выбрать погрузчик',
+            time: '2:08',
+            image: 3
+        },
+        {
+            title: 'Фронтальный погрузчик Runmax 972E',
+            time: '2:08',
+            image: 4
+        },
+        {
+           title: 'Фронтальный погрузчик Runmax 972E',
+            time: '2:08',
+            image: 5 
+        },
+        {
+            title: 'Как выбрать погрузчик',
+            time: '2:08',
+            image: 6
+        },
+        {
+            title: 'Фронтальный погрузчик Runmax 972E',
+            time: '2:08',
+            image: 1
+        },
+         {
+            title: 'Как выбрать погрузчик',
+            time: '2:08',
+            image: 2
+        },
+    ]
+
+section.section.section_m160.videos.tabs-wrapper
+    .container
+        .section__top
+            h2.section__title.white Смотрите БигTube
+            .section__tabs
+                +tabs(tabsVideos)
+            a(href="").section__link.white
+                .section__link-decore.white
+                    +svg({
+                        name: 'chevron',
+                        size: [8, 12]
+                    }) 
+                span.section__link-title смотреть Больше видео
+        .section__middle
+            - let i = 0; while(i < 3)
+                - i++  
+                    div(data-tab=i class=`videos__wrapper ${i == 1 ? 'active' : ''}`)
+                        ul.videos__list
+                            each data in videos
+                                li.video__item
+                                    +video(data)
+                                    

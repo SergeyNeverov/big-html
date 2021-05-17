@@ -1,0 +1,24 @@
+mixin product(data)
+    div(class=`product ${data.small ? 'product_small': ''}`)
+        if(data.hit)
+            .product__label
+                img(src="img/fire.png", alt="Хит")
+                span Хит
+        a(href="/").product__image
+            img(src=`/pictures/${data.img}`, alt="")
+        a(href="/").product__title=data.title
+        if(data.availability)
+            .product__availability.product-availability
+                +svg({
+                    name: 'check'
+                })
+                span Есть в наличии
+        .product__prices 
+           .product__price=data.price
+           if(data.oldPrice)
+                .product__price-old=data.oldPrice 
+        .product__bonus=data.bonus
+        if(data.small)
+            a(href=""  data-modal-open="cart").button.button_small.button_red В корзину
+        else
+            a(href=""  data-modal-open="cart").button.button_red.button_middle В корзину

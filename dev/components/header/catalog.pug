@@ -1,0 +1,70 @@
+include ../blocks/logo/index
+include ../blocks/header-navigation/index
+include ../blocks/tabs/index
+include ../blocks/breadcrumbs/index
+-   
+    const tabsHeader = [
+        {
+            name: 'Поиск по параметрам',
+            video: false,
+            active: true,
+            svg: 'filter',
+            id: 4
+        },
+        {
+            name: 'Поиск по названию',
+            video: false,
+            id: 5,
+            svg: 'search'
+        }
+    ]
+    const white = true;  
+    const navigation = [{title: 'Спецтехника',white: white, selected: true},{title: 'Запчасти',white: white},{title: 'Шины',white: white }, {title: 'Двигатели',white: white },{title: 'Фильтры',white: white },{title: 'ГСМ',white: white }];
+    const breadcrumbs = ['Главная', 'Каталог', 'Шины']  
+header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
+    .container.container_header
+        .header__wrapper
+            +logo('white')
+            .header__navigation    
+                +headerNavigation(navigation)
+            .header__actions
+                a(href="/").header__search
+                    +svg({
+                        name: 'search'
+                    })
+                .header__contacts
+                    a(href="tel:88002000619").header__phone 8 (800) 200-06-19
+                    .header__city
+                        span Санкт-Петербург
+                        +svg({
+                            name: 'chevron'
+                        })
+                .header__icons
+                    ul.header__icons-list
+                        li.header__icons-item
+                            a(href="/").header__icons-link
+                                +svg({
+                                    name: 'user'
+                                })
+                        li.header__icons-item
+                            a(href="/").header__icons-link
+                                +svg({
+                                    name: 'copy'
+                                })
+                                .header__icons-link-count 2
+                        li.header__icons-item
+                            a(href="/").header__icons-link
+                                +svg({
+                                    name: 'bookmark'
+                                })
+                                .header__icons-link-count=2
+                        li.header__icons-item
+                            a(href="/").header__icons-link
+                                +svg({
+                                    name: 'cart'
+                                })
+                                .header__icons-link-count=2
+    .container                                                      
+        .header__content.header__content_inner
+            +breadcrumbs(breadcrumbs)
+            h1.title.title_main.title_white.title_main-left Шины для #[br]спецтехники

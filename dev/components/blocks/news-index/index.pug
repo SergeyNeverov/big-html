@@ -1,0 +1,58 @@
+include ../news-item/index
+
+-
+    const news = [
+        {
+            title: 'Режим работы в период самоизоляции',
+            tag: 'Аналитика',
+            count: 475,
+            date: '17 марта 2021'
+        },
+        {
+            title: 'Вилочные погрузчики TAILIFT и LIUGONG',
+            tag: 'Финансы',
+            count: 211,
+            date: '21 января 20211'
+        },
+        {
+            title: 'Вилочные погрузчики TAILIFT и LIUGONG',
+            tag: 'Финансы',
+            count: 124,
+            date: '14 декабря 2020'
+        },
+           {
+            title: 'Поступление фильтров STAL',
+            tag: 'Финансы',
+            count: 124,
+            date: '14 декабря 2020'
+        },
+           {
+            title: 'Вилочные погрузчики TAILIFT и LIUGONG',
+            tag: 'Финансы',
+            count: 211,
+            date: '21 января 20211'
+        },
+           {
+            title: 'Вилочные погрузчики TAILIFT и LIUGONG',
+            tag: 'Финансы',
+            count: 211,
+            date: '21 января 20211'
+        },
+    ]
+
+section.section.section_m160
+    .container
+        .section__top
+            h2.section__title Читайте Бигжурнал
+            a(href="").section__link
+                .section__link-decore
+                    +svg({
+                        name: 'chevron',
+                        size: [8, 12]
+                    }) 
+                span.section__link-title Перейти в журнал
+        .section__middle
+            ul.news-index__list
+                each item in news
+                    li.news-index__item
+                        +newsItem(item)          

@@ -1,0 +1,9 @@
+mixin video(data)
+    a(href="/" data-card="" style=`background-image: url(/pictures/${data.image}.jpg)`).video
+        .video__image
+            +svg({
+                name: 'play'
+            })
+        .video__text
+            .video__title=data.title
+            .video__time=data.time

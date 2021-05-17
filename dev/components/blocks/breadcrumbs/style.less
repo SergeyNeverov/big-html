@@ -1,0 +1,40 @@
+.breadcrumbs {
+    padding-bottom: 48px;
+    &__list {
+        display: flex;
+        .list-reset;
+    }
+    &__item {
+        margin-right: 16px;
+        &:last-child {
+            a {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        .transitionSecond;
+        &::after {
+            content: "/";
+            color: #fff;
+            padding-left: 20px;
+        }
+        &:hover {
+            color: @firstColor;
+        }
+        &_grey {
+            color: #8F8F8F;
+            &::after {
+                color: #8F8F8F; 
+            }
+        }
+    }
+}

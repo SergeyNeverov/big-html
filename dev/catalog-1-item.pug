@@ -1,0 +1,152 @@
+include components/global.pug
+include components/svg/index.pug
+include components/head/index.pug
+include components/blocks/products/index.pug
+
+- 
+    pageSettings = {
+        title: 'Главная',
+        contacts: false
+    }
+
+    products = {
+       title: 'Спецтехника',
+       banner: true,
+       class: 'col-4', //col-6 - 6 columns/ col-3 - 3 columns
+       items: [
+            {
+                img: '2.png',
+                title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                availability: true,
+                price: '25 990 ₽',
+                oldPrice: '29 990 ₽',
+                bonus: '+ 255 бонусов'
+            }, 
+            {
+                img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'           
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            }
+       ] 
+    }
+    tyres = {
+        title: 'Шины',
+        banner: false,
+        class: 'col-4', //col-6 - 6 columns/ col-3 - 3 columns
+        items: [
+                {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                    availability: true,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                }, 
+               {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 (волна) 24PR',
+                    availability: false,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                },
+                {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 (волна) 24PR',
+                    availability: true,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                },
+                  {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 (волна) 24PR',
+                    availability: true,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                }, 
+                  {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                    availability: false,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                }, 
+                  {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                    availability: true,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                }, 
+                  {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                    availability: false,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                },
+                 {
+                    img: '1.png',
+                    title: 'Шина MAXTIRES 17.5-25 (волна) 24PR',
+                    availability: true,
+                    price: '25 990 ₽',
+                    oldPrice: '29 990 ₽',
+                    bonus: '+ 255 бонусов'
+                },     
+            ] 
+    }
+
+<!DOCTYPE html>
+html(lang=global.lang)
+    head
+        +head(pageSettings)
+    body.page
+        include components/header/catalog-white.pug
+        main.main
+            include components/blocks/categories/centered
+            include components/blocks/catalog/1item
+            include components/blocks/viewed/index
+            include components/blocks/recomends/index
+        include components/footer/index.pug

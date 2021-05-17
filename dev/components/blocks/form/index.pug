@@ -1,0 +1,28 @@
+section.section.section_m160.form
+    .container
+        .form__wrapper
+            .form__side.form__side_text
+                h2.form__title Написать руководителю
+                p.form__description Пожалуйста, заполните простую форму и мы свяжемся с вами в ближайшее время
+            form.form__side.form-e(data-method="CALL")
+                .form__fields
+                    .field.field_half.field_white
+                        span.field__required *
+                        input.field__input.fi.req.field__input_white(name="NAME" placeholder="Имя")
+                    .field.field_half.field_white
+                        span.field__required *
+                        input.field__input.fi.req.field__input_white(name="PHONE" placeholder="Телефон" data-masked="phone")
+                    .field.field_white
+                        span.field__required *
+                        textarea.field__input.fi.req.field__input_white(name="MESSAGE" placeholder="Сообщение")
+                .form__action
+                    .form__action-check
+                        label.check
+                            input.check__input(type="checkbox" name="agree")
+                            span.check__decore
+                                +svg({
+                                    name: 'check'
+                                })
+                            span.check__text Нажимая на кнопку, я даю согласие на обработку персональных данных
+                    a(href="javascript:void(0);").button.button_white.button_form  Отправить заявку
+

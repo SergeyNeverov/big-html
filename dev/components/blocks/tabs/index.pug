@@ -1,0 +1,11 @@
+mixin tabs(data)
+    .tabs
+        ul.tabs__list
+            each item in data
+                li.tabs__item
+                    a(href="javascript:void(0)" class=`tabs__link ${item.active ? 'active' : ''} ${item.video ? 'tabs__link_grey' : ''}` data-tab-open=item.id)
+                        if item.svg
+                            +svg({
+                                name: item.svg
+                            }) 
+                        span=item.name

@@ -1,0 +1,123 @@
+include ../product/index
+
+-    
+    items = [
+               {
+                img: '2.png',
+                title: 'Шина MAXTIRES 17.5-25 G-2/L-2(клюшка) 24PR',
+                availability: true,
+                small: true,
+                price: '25 990 ₽',
+                oldPrice: '29 990 ₽',
+                bonus: '+ 255 бонусов'
+            }, 
+            {
+                img: '4.png',
+                small: true,
+                hit: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'           
+            }, 
+            {
+                 img: '8.jpg',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                img: '7.jpg',
+                small: true,
+                hit: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            },
+             {
+                 img: '8.jpg',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                 img: '4.png',
+                 small: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '14 390 ₽',
+                bonus: '+ 143 бонуса'        
+            }, 
+            {
+                img: '7.jpg',
+                small: true,
+                hit: true,
+                title: 'Шина MAXTIRES 20.5/70-16 (волна) 16PR',
+                availability: true,
+                price: '29 990 ₽',
+                bonus: '+ 299 бонусов'       
+            }
+        ]
+
+section.viewed.section.section_m-0.section_grey 
+    .container
+        h2.section__title.section__title_ml Недавно #[br]просмотренные
+        .slider(data-count="6")
+            .slider__arrows
+                a(href="javascritp:void(0)" data-slider-arrow="prev").slider__arrow.slider__arrow_left
+                    +svg({
+                        name: 'chevron'
+                    })
+                a(href="javascritp:void(0)" data-slider-arrow="next").slider__arrow.slider__arrow_right
+                    +svg({
+                        name: 'chevron'
+                    })  
+            ul.slider__list
+                each item in items
+                    li.slider__item
+                        +product(item)        

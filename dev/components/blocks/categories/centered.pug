@@ -1,0 +1,33 @@
+include ../category/index
+
+-   
+    const cats = [
+        {
+            title: 'Спецтехника',
+            img: 3
+        },
+        {
+            title: 'Запчасти',
+            img: 5
+        },
+         {
+            title: 'Шины',
+            img: 4
+        },
+         {
+            title: 'Двигатели',
+            img: 2
+        },
+         {
+            title: 'Фильтры',
+            img: 6
+        },
+
+    ]
+
+section.section.section_m80-128.categories
+    .container
+        ul.categories__list.categories__list_centered
+            each data in cats
+                li.categories__item
+                    +category(data)

@@ -1,0 +1,35 @@
+footer.footer
+    .container
+        .footer__container
+            .footer__side
+                include ../blocks/footer-subscribe/index
+                include ../blocks/footer-pays/index
+            .footer__center
+                include ../blocks/footer-navigation/index
+            .footer__side
+                .footer-contacts
+                    .footer-contacts__block
+                        span.footer-contacts__title Единый номер телефона
+                        a(href="tel:88002000619").footer-contacts__link  8 (800) 200-06-19
+                    .footer-contacts__block
+                        span.footer-contacts__title Единый номер телефона
+                        a(href="mailto:sales@big-center.ru").footer-contacts__link  sales@big-center.ru
+                .footer__social 
+                    include ../blocks/social/index        
+        .footer__container
+            .copyright
+                p.copyright__text © 2009-2021 «БигЦентр». Все права защищены.
+                p.copyright__links
+                    a(href="/") Политика конфиденциальности
+                    a(href="/") Положение о персональных данных
+    <svg class="filter-svg">
+        <filter id="glitch">
+            <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="1" seed="2">
+                <animate attributeName="seed" from="1" to="100" dur="10s" repeatCount="indefinite" />
+            </feTurbulence>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+include ../blocks/modals/index                         
+script(src="js/libs.js")
+script(src="js/script.js")
