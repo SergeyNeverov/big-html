@@ -1,6 +1,27 @@
 document.addEventListener('DOMContentLoaded',function(){
     const cards = document.querySelectorAll('[data-card=""]'),
-          tabs = document.querySelectorAll('[data-tab-open]')
+          tabs = document.querySelectorAll('[data-tab-open]'),
+          showMore = document.querySelector('[data-show-props]')
+
+    if(showMore){
+        showMore.addEventListener('click', e => {
+            e.preventDefault();
+            const hiddenItems = document.querySelectorAll('[data-hidden-prop="true"]')
+            if(showMore.classList.contains('active')){
+                hiddenItems.forEach( element => {
+                    element.classList.remove('hidden');
+                });
+                showMore.classList.remove('active');
+                showMore.querySelector('span').innerText = 'Развернуть';
+            } else {
+                hiddenItems.forEach( element => {
+                    element.classList.add('hidden');
+                });
+                showMore.classList.add('active');
+                showMore.querySelector('span').innerText = 'Свернуть';
+            }
+        });
+    }
 
     if(cards){
         cards.forEach(card => {

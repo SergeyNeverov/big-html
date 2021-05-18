@@ -1,0 +1,15 @@
+section.section.product-video(style='background-image: url(/pictures/video.jpg)')
+    h2.product-video__title Техника  #[br]в работе
+    a(href="javascript:void(0);").product-video__button
+        +svg({
+            name: 'play'
+        })
+    a(href="javascript:void(0);").product-video__timing
+        .product-video__timing-title
+            span(data-from="") 0:04 
+            | / 
+            span(data-to="") 2:23 
+        .product-video__timing-decore
+            +svg({
+                name: 'sound'
+            })

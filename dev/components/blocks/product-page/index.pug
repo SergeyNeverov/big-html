@@ -1,3 +1,55 @@
+-
+    const props = [
+        {
+            k: 'Год выпуска',
+            v: '2020'
+        },
+        {
+            k: 'Высота выгрузки',
+            v: '3800 мм'
+        },
+        {
+            k: 'Грузоподъемность',
+            v: '2500 кг'
+        },
+        {
+            k: 'Объем ковша',
+            v: 'до 1.3 м<sup>3</sup>'
+        },
+        {
+            k: 'Вес погрузчика',
+            v: '5800 кг'
+        },
+        {
+            k: 'Габариты погрузчика <br> (Д × Ш × В)',
+            v: '6800 × 2300 × 3050'
+        },
+        {
+            k: 'Двигатель',
+            v: 'YUNNEI YN38GBZ'
+        },
+        {
+            k: 'Высота подъема стрелы',
+            v: '4300 мм'
+        },
+         {
+            k: 'Габариты погрузчика <br> (Д × Ш × В)',
+            v: '6800 × 2300 × 3050'
+        },
+        {
+            k: 'Двигатель',
+            v: 'YUNNEI YN38GBZ'
+        },
+        {
+            k: 'Высота подъема стрелы',
+            v: '4300 мм'
+        },
+        {
+            k: 'Высота подъема стрелы',
+            v: '4300 мм'
+        },
+    ]
+
 section.product-page
     .container
         .product-page__top
@@ -95,83 +147,11 @@ section.product-page
                             </defs>
                         </svg>
                         span Покупай со Сбером
-section.section.product-description
-    .container
-        .product-description__wrapper
-            .product-description__side
-                h2.product-description__title Описание #[br]техники
-                a(href="/").product-description__link
-                     
-section.section.product-features
-    .container
-        .product-features__wrapper
-            h2.product-features__title Комплектация
-            ul.product-features__list
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Быстросъемная каретка
-                li.product-features__item 
-                    +svg({
-                        name:'check'
-                    })
-                    span  Трехконтурная гидросистема
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  LED фары усиленного свечения
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Проблесковый маячок
-                li.product-features__item 
-                    +svg({
-                        name:'check'
-                    })
-                    span  Защита центрального гидро-цилиндра
-                li.product-features__item 
-                    +svg({
-                        name:'check'
-                    })
-                    span  Защита суппортов
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Комплект фильтров на первое ТО 
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Набор инструментов 
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Комплект рабочей одежды 
-                li.product-features__item
-                    +svg({
-                        name:'check'
-                    })
-                    span  Погрузочно-увязочные работы 
-section.section.product-video(style='background-image: url(/pictures/video.jpg)')
-    h2.product-video__title Техника  #[br]в работе
-    a(href="javascript:void(0);").product-video__button
-        +svg({
-            name: 'play'
-        })
-    a(href="javascript:void(0);").product-video__timing
-        .product-video__timing-title
-            span(data-from="") 0:04 
-            | / 
-            span(data-to="") 2:23 
-        .product-video__timing-decore
-            +svg({
-                name: 'sound'
-            })    
+include product-desc.pug                        
+include product-props.pug       
+include product-features.pug
+include product-video.pug
+section.section.product-specials
 
 
 
