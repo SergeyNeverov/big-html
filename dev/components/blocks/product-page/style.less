@@ -99,15 +99,16 @@
         }
     }
     &__info-pays {
-        margin-top: 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
         &-link {
             display: flex;
             align-items: center;
             text-decoration: none;
-            
+            margin-bottom: 20px;
             &:hover {
                 span {
                     color: @firstColor;
@@ -258,7 +259,7 @@
     &__side {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 50%;
     }
     &__decore {
         margin-top: auto;
@@ -287,8 +288,14 @@
                 width: 24px;
                 height: 24px;
             }
+            &.chevron {
+                svg {
+                    width: 8px;
+                    height: 12px;
+                }
+            }
         }
-
+       
         &-title {
             font-family: @font1;
             text-transform: uppercase;
@@ -354,5 +361,72 @@
     }
     &__value {
         color: #8F8F8F;
+    }
+}
+.product-specials {
+    &__list {
+        .list-reset;
+    }
+    &__item {
+        margin-bottom: 7.5%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.product-special {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    &_reverse {
+        justify-content: flex-start; 
+        .product-special__image {
+            order: -1;
+        }
+    }
+    &__text {
+        margin-left: 10%;
+        width: 40%;
+    }
+    &__title {
+        .titleSection;
+    }
+    &__image {
+        width: 40%;
+        position: relative;
+        img {
+            object-fit: cover;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    &__desc {
+        p {
+            margin: 6.2% 0 0 0; 
+        }
+    }
+}
+
+.product-model {
+    position: relative;
+    &__title {
+        .titleSection;
+        position: absolute;
+        top: 8%;
+        left: 16.7%;
+        color: #fff;
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 4%;
+        left: 0;
+        width: 100%;
     }
 }

@@ -5,7 +5,7 @@ include components/blocks/products/index.pug
 
 - 
     pageSettings = {
-        title: 'Главная',
+        title: 'Страница товара',
         contacts: false
     }
 
@@ -17,6 +17,6 @@ html(lang=global.lang)
         include components/header/product.pug
         main.main
             include components/blocks/product-page/index
-            include components/blocks/form/index
+            include components/blocks/form/product
             include components/blocks/recomends/index
         include components/footer/index.pug

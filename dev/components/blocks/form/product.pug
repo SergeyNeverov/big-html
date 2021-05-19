@@ -1,0 +1,31 @@
+section.section.section_m160.form
+    .container
+        .form__wrapper
+            .form__side.form__side_text
+                h2.form__title Связаться #[br] с нами
+                p.form__description Пожалуйста, заполните простую форму и мы свяжемся с вами в ближайшее время
+            form.form__side.form-e(data-method="CALL")
+                .form__fields
+                    .field.field_half.field_white
+                        span.field__required *
+                        input.field__input.fi.req.field__input_white(name="NAME" placeholder="Имя")
+                    .field.field_half.field_white
+                        span.field__required *
+                        input.field__input.fi.req.field__input_white(name="PHONE" placeholder="Телефон" data-masked="phone")
+                .form__time
+                    a(href="javascript:void(0);").form__time-toggle
+                        +svg({
+                            name: 'clock'
+                        })
+                        span Выбрать дату и время звонка               
+                .form__action
+                    .form__action-check
+                        label.check
+                            input.check__input(type="checkbox" name="agree")
+                            span.check__decore
+                                +svg({
+                                    name: 'check'
+                                })
+                            span.check__text Нажимая на кнопку, я даю согласие #[br] на обработку персональных данных
+                    a(href="javascript:void(0);").button.button_white.button_form  Отправить заявку
+

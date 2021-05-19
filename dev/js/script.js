@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded',function(){
         $(this).closest('.filter-block').find('.filter-block__content').slideToggle();
     });
 
+    $('.select').niceSelect();
+
     $('.slider').each(function(i, slider){
         const slidesToShow = +slider.dataset.count,
                 slides = $(slider).find('.slider__list'),
