@@ -1,3 +1,8 @@
+@media(max-width: 1600px) {
+    .catalog__list {
+        .grid-2fr-res;
+    }
+}
 @media(max-width: 1440px) {
     .container {
         width: 92%;
@@ -62,5 +67,115 @@
             }
         }
     }
+    .product-wide {
+        &__buttons {
+            flex-wrap: wrap;
+        }
+        &__actions {
+            max-width: 180px;
+        }
+        &__icons {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+    .button_item {
+        margin-left: auto;
+    }
+}
+@media (max-width: 1280px) {
+    .header {
+        &__contacts {
+            display: none;
+        }
+        &__search {
+            display: none;
+        }
+        &__icons {
+            margin-left: auto;
+        }
+    }
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .social {
+        &__item {
+            width: 100%;
+        }
+    }
+    .catalog {
+        &__filter {
+            min-width: 300px;
+        }
+    }
+    .section {
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .product-description {
+        &__title {
+            font-size: 28px;
+        }
+        &__decore {
+            transform: scale(0.75);
+        }
+    }
+    .product-special {
+        &__title {
+            font-size: 28px;
+        }
+    }
+    .social {
+        min-width: unset;
+    }
+    &__icons {
+        margin-left: auto;
+    }
     
+    .product-gallery {
+        &__item {
+            height: 240px;
+            &.w100 {
+                height: 360px;
+            }
+        }
+        &__list {
+            gap: 24px 24px;
+        }
+    }
+    .product-features {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__list {
+            margin-top: 24px;
+        }
+    }
+    .footer-pays {
+        display: none;
+    }
+    .title_product {
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .product-page {
+        &__buttons-wrapper {
+            flex-wrap: wrap;
+        }
+        &__actions {
+            margin-left: 0;
+            order: -1;
+        }
+    }
+    .filter-block {
+        padding: 16px 24px;
+        &_search {
+            padding: 0;
+        }
+        &__check {
+            width: 100%;
+        }
+    }
 }
