@@ -179,3 +179,137 @@
         }
     }
 }
+
+@media(max-width: 1024px) {
+    .header {
+        &__select {
+            margin-top: 8%;
+        }
+        &__navigation {
+            display: none;
+        }
+        &__search {
+            display: block;
+        }
+        &__actions {
+            flex-wrap: nowrap;
+            width: auto;
+        }
+        &__icons {
+            margin-top: 0;
+            &-list {
+                display: flex;
+                justify-content: flex-end;
+                grid-gap: unset;
+            }
+            &-item {
+                &:first-child {
+                    margin: 0 30px;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .container {
+        width: 100%;
+        padding: 0 64px;
+    }
+    .title {
+        &_main {
+            font-size: 3rem;
+            line-height: 3.5rem;
+        }
+    }
+    .logo {
+        width: auto;
+    }
+    .categories {
+        margin: 64px 0 80px 0;
+        &__list {
+            display: flex;
+            width: auto;
+            overflow-y: scroll;
+            grid-template-columns: unset;
+            grid-template-rows: unset;
+            gap: unset;
+            grid-template-areas: unset;
+            padding-bottom: 16px;
+        }
+        &__item {
+            margin-right: 32px;
+        }
+    }
+    .category {
+        width: 160px;
+    }
+    .products {
+        margin-top: 80px;
+        &__list {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 40px;
+            grid-template-areas:
+            ". ."
+            ". .";
+
+        }
+    }
+    .product {
+        padding: 8%;
+    }
+
+    .footer {
+        padding: 64px 0 56px;
+        &__center {
+            display: none;
+        }
+        &__container {
+            flex-direction: column;
+        }
+        &__side {
+            width: 100%;
+        }
+    }
+    .footer-pays {
+        display: block;
+        &__list {
+            margin: 58px 0 74px;
+        }
+    }
+    .footer-contacts {
+        display: flex;
+        justify-content: space-between;
+    }
+    .social {
+        &__item {
+            width: 25%;
+        }
+    }
+    .news-index {
+        &__list {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 40px 0;
+            grid-template-areas:
+            "."
+            ".";
+        }
+        &__item {
+            width: 100%;
+        }
+    }
+    .form {
+        &__wrapper {
+            flex-direction: column;
+        }
+        
+        .form__side {
+            width: 100%;    
+        }
+    }
+    .field {
+        width: 100%;
+    }
+}

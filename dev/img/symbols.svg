@@ -60,26 +60,26 @@
         <circle cx="8" cy="17" r="3" stroke-width="2"/>
         <path d="M11 17L21 17"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg-photo">
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="none" id="svg-photo">
         <path d="M23 19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8C1 7.46957 1.21071 6.96086 1.58579 6.58579C1.96086 6.21071 2.46957 6 3 6H7L9 3H15L17 6H21C21.5304 6 22.0391 6.21071 22.4142 6.58579C22.7893 6.96086 23 7.46957 23 8V19Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 17C14.2091 17 16 15.2091 16 13C16 10.7909 14.2091 9 12 9C9.79086 9 8 10.7909 8 13C8 15.2091 9.79086 17 12 17Z" stroke="#B3B3B3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg-search">
+    <symbol xmlns="http://www.w3.org/2000/svg"  fill="none" id="svg-search">
         <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M21 21L16.65 16.65"  stroke-width="2" stroke-linecap="square"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg-bookmark">
+    <symbol xmlns="http://www.w3.org/2000/svg"  fill="none" id="svg-bookmark">
         <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg-cart">
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="none" id="svg-cart">
         <path d="M21 22.5H3L4.75 6H19.25L21 22.5Z" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M15 5C15 3.34315 13.6569 2 12 2C10.3432 2 9 3.34315 9 5" stroke-width="2"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" id="svg-copy">
+    <symbol xmlns="http://www.w3.org/2000/svg"   fill="none" id="svg-copy">
         <path d="M20 9H11C9.89543 9 9 9.89543 9 11V20C9 21.1046 9.89543 22 11 22H20C21.1046 22 22 21.1046 22 20V11C22 9.89543 21.1046 9 20 9Z"  stroke-width="2" stroke-linecap="square"/>
         <path d="M9 15H4C3.46957 15 2.96086 14.7893 2.58579 14.4142C2.21071 14.0391 2 13.5304 2 13V4C2 3.46957 2.21071 2.96086 2.58579 2.58579C2.96086 2.21071 3.46957 2 4 2H13C13.5304 2 14.0391 2.21071 14.4142 2.58579C14.7893 2.96086 15 3.46957 15 4V9" stroke-width="2" stroke-linecap="square"/>
     </symbol>
-    <symbol xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" id="svg-user">
+    <symbol xmlns="http://www.w3.org/2000/svg"  fill="none" id="svg-user">
         <path d="M1 20C1 7.99987 19 8.00011 19 20"  stroke-width="2"/>
         <circle cx="10" cy="6" r="5"  stroke-width="2"/>
     </symbol>
