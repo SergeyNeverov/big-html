@@ -1,7 +1,7 @@
 include ../product/index
 
 mixin products(data)
-    section.section.section_m160.products
+    section(class=`section section_m160 products  ${data.scroll ? 'section_scroll' : '' }`)
         .container
             .section__top
                 h2.section__title=data.title
@@ -17,7 +17,7 @@ mixin products(data)
                     if(data.banner)
                         //- баннер до товаров
                         li.products__item
-                            .banner-vertical(style="height: 678px; width: 100%; background: #333; display:flex; justify-content: center; align-items:center;")
+                            .banner-vertical(style="height: 100%; width: 100%; background: #333; display:flex; justify-content: center; align-items:center;")
                                 span(style="color: #fff; font-size: 48px;") Баннер
                     each item in data.items
                         li.products__item
@@ -32,4 +32,13 @@ mixin products(data)
                                         name: 'chevron',
                                         size: [8, 12]
                                     })
-                                span.products__button-title Посмотреть больше товаров              
+                                span.products__button-title Посмотреть больше товаров
+            if !data.hidebottom                     
+                .section__bottom
+                    a(href="").section__link
+                        .section__link-decore
+                            +svg({
+                                name: 'chevron',
+                                size: [8, 12]
+                            }) 
+                        span.section__link-title Больше товаров

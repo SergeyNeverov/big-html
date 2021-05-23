@@ -1,5 +1,12 @@
 .filter
-    p.filter__title 112 товаров
+    .filter__top
+        p.filter__title 112 товаров
+        a.filter__toggle(href="javascript:void(0);" data-filter-toggle="")
+            +svg({
+                name: 'filter'
+            }) 
+            span Фильтр
+    .filter__wrapper
         .filter-block.filter-block_search
             input(type="text" name='q' placeholder="Поиск по названию").fi.filter-block__input 
             .filter-block__icon

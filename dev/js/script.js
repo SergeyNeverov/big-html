@@ -109,8 +109,19 @@ document.addEventListener('DOMContentLoaded',function(){
                     settings: {
                       slidesToShow: slidesToShow - 2,
                     }
-                  }
+                },
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        variableWidth: true
+                    }
+                }
               ]
         })        
-    })
+    });
+
+    $('[data-filter-toggle]').on('click', function(){
+        $('.filter__wrapper').slideToggle();
+    });
+
 });

@@ -18,7 +18,7 @@ include ../blocks/tabs/index
         }
     ]
     const white = true;  const navigation = [{title: 'Спецтехника',white: white, selected: true},{title: 'Запчасти',white: white},{title: 'Шины',white: white }, {title: 'Двигатели',white: white },{title: 'Фильтры',white: white },{title: 'ГСМ',white: white }]  
-header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
+header(class=`header header_dark header_index` style=`background-image: url(img/header.jpg)`)
     .container.container_header
         .header__wrapper
             +logo('white')
@@ -60,7 +60,10 @@ header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
                                 +svg({
                                     name: 'cart'
                                 })
-                                .header__icons-link-count=2                          
+                                .header__icons-link-count=2
+                        li.header__icons-item.burger
+                            span.burger__line 
+                            span.burger__line                                   
         .header__content
             h1.title.title_main.title_white Лидер рынка #[br]по продаже спецтехники #[br] и запчастей
             .header__select

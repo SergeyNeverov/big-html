@@ -83,4 +83,13 @@ section.section.section_m160.videos.tabs-wrapper
                             each data in videos
                                 li.video__item
                                     +video(data)
+        .section__bottom
+            a(href="").section__link.white
+                .section__link-decore.white
+                    +svg({
+                        name: 'chevron',
+                        size: [8, 12]
+                    }) 
+                span.section__link-title смотреть Больше видео
+
                                     

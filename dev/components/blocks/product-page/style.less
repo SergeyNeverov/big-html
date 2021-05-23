@@ -189,13 +189,14 @@
         line-height: 48px;
         color: #fff;
         font-family: @font1;
+        text-transform: uppercase;
     }
     &__button {
         display: block;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50% -50%);
+        transform: translate(-50%,-50%);
         align-self: center;
         width: 104px;
         height: 104px;
@@ -255,11 +256,15 @@
         display: flex;
         justify-content: space-between;
         padding: 0 10%;
+        flex-wrap: wrap;
     }
     &__side {
         display: flex;
         flex-direction: column;
         width: 50%;
+        &-full {
+            width: 100%;
+        }
     }
     &__decore {
         margin-top: auto;

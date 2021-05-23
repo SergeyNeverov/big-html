@@ -2,47 +2,48 @@ mixin productWide(data)
     .product-wide.product
         a(href="/").product__image.product-wide__image
             img(src=`/pictures/${data.img}`, alt="")
-        .product-wide__text
-            a(href="/").product-wide__title.product__title=data.title
-            .product-wide__props
-                .product-wide__props-block
-                    span.product-wide__prop-key Слойность шины
-                    span.product-wide__prop-value 16 PR
-                .product-wide__props-block
-                    span.product-wide__prop-key Исполнение шины
-                    span.product-wide__prop-value Пневматическая
-                .product-wide__props-block
-                    span.product-wide__prop-key Макс. нагрузка
-                    span.product-wide__prop-value 2850 кг
-                .product-wide__props-block
-                    span.product-wide__prop-key Ось применения
-                    span.product-wide__prop-value Универсальная
-                .product-wide__props-block
-                    span.product-wide__prop-key Слойность шины
-                    span.product-wide__prop-value 16 PR                
-        .product-wide__actions
-            if(data.availability)
-                .product__availability.product-wide__availability
-                    +svg({
-                        name: 'check'
-                    })
-                    span Есть в наличии
-            .product-wide__prices
-                if(data.oldPrice)
-                    .product__price-old=data.oldPrice
-                .product__price.product-wide__price=data.price
-                .product__bonus=data.bonus
-            .product-wide__buttons 
-                .product-wide__icons
-                    a(href="").product-wide__icon.active
+        .product-wide__block    
+            .product-wide__text
+                a(href="/").product-wide__title.product__title=data.title
+                .product-wide__props
+                    .product-wide__props-block
+                        span.product-wide__prop-key Слойность шины
+                        span.product-wide__prop-value 16 PR
+                    .product-wide__props-block
+                        span.product-wide__prop-key Исполнение шины
+                        span.product-wide__prop-value Пневматическая
+                    .product-wide__props-block
+                        span.product-wide__prop-key Макс. нагрузка
+                        span.product-wide__prop-value 2850 кг
+                    .product-wide__props-block
+                        span.product-wide__prop-key Ось применения
+                        span.product-wide__prop-value Универсальная
+                    .product-wide__props-block
+                        span.product-wide__prop-key Слойность шины
+                        span.product-wide__prop-value 16 PR                
+            .product-wide__actions
+                if(data.availability)
+                    .product__availability.product-wide__availability
                         +svg({
-                            name: 'copy'
+                            name: 'check'
                         })
-                    a(href="").product-wide__icon
-                        +svg({
-                            name: 'bookmark'
-                        })
-                a(href="/" data-modal-open="cart").button.button_item.button_red  В корзину       
+                        span Есть в наличии
+                .product-wide__prices
+                    if(data.oldPrice)
+                        .product__price-old=data.oldPrice
+                    .product__price.product-wide__price=data.price
+                    .product__bonus=data.bonus
+                .product-wide__buttons 
+                    .product-wide__icons
+                        a(href="").product__icon.active
+                            +svg({
+                                name: 'copy'
+                            })
+                        a(href="").product__icon
+                            +svg({
+                                name: 'bookmark'
+                            })
+                    a(href="/" data-modal-open="cart").button.button_item.button_red  В корзину       
 
 
     

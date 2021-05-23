@@ -6,6 +6,15 @@ mixin product(data)
                 span Хит
         a(href="/").product__image
             img(src=`/pictures/${data.img}`, alt="")
+        .product__icons
+            a(href="").product__icon.active
+                +svg({
+                    name: 'copy'
+                })
+            a(href="").product__icon
+                +svg({
+                    name: 'bookmark'
+                })    
         a(href="/").product__title=data.title
         if(data.availability)
             .product__availability.product-availability
