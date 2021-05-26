@@ -2,6 +2,12 @@
     &__wrapper {
         padding: 40px;
     }
+    &-login {
+        max-width: 640px !important;
+        .modal__wrapper {
+            padding: 80px;
+        }
+    }
     &__close {
         position: absolute;
         right: 40px;
@@ -12,6 +18,11 @@
             stroke: #000;
         }
     }
+    &__form {
+        &.form{
+            margin-top: 48px;
+        }
+    }
     &__title {
         margin: 0;
         font-weight: bold;
@@ -19,6 +30,9 @@
         line-height: 24px;
         font-family: @font1;
         text-transform: uppercase;
+        &_big {
+            .titleSection;
+        }
     }
     &__body {
         display: flex;
@@ -39,6 +53,7 @@
         line-height: 20px;
         max-width: 12rem;
         font-weight: bold;
+        max-width: 108px;
     }
     &__text {
         display: flex;
@@ -63,8 +78,148 @@
         font-size: 16px;
         line-height: 16px;
     }
+    &__link {
+        .transitionSecond;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        font-family: @font1;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: @firstColor;
+        }
+        &.big {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 44px 80px;
+        border-top: 1px solid #E0E0E0;
+    }
+    &__text {
+        margin: 16px 0 8px 0;
+        color: #666666;
+    }
+    &__titles {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 32px;
+        .sup {
+            color: #B3B3B3;
+            font-family: @font1;
+            font-size: 12px;
+        }
+        .sub{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: #000;
+            font-family: @font1;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__search {
+        position: relative;
+        margin-bottom: 48px;
+        svg{
+            position: absolute;
+            right: 0;
+            top: 0;
+           width: 24px;
+           height: 24px;
+           stroke: #000; 
+        }
+        &-input {
+            width: 100%;
+            border:none;
+            border-bottom: 2px solid #000000;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: @font1;
+            padding-bottom: 16px;
+            .transitionSecond;
+            &::placeholder {
+              color: #8F8F8F;
+            }
+            &:focus {
+                border-bottom: 2px solid #8F8F8F;
+                outline: none;
+            }
+        }
+    }
+    &__list {
+        .list-reset;
+    }
+    &__item {
+        margin-bottom: 24px;
+    }
 }
 
 .modal-cart {
     max-width: 480px !important;
+}
+.modal-social {
+    &__list {
+        display: flex;
+        align-items: center;
+        .list-reset;
+
+    }
+    &__item {
+        margin-right: 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: #F1F1F1;
+        .transitionSecond;
+        svg {
+            width: 24px;
+            height: 24px;
+            .transitionSecond; 
+            fill: #B3B3B3;
+        }
+
+        &.ya:hover {
+            background: #FC3F1D;
+         
+        }
+        &.vk:hover {
+            background-color: #2787f5;
+        }
+        &.fb {
+            svg{
+                width: 12px;
+            }
+            &:hover {
+                background: #3b5998;
+            }
+        }
+        &:hover {
+            svg {
+                fill: #fff;
+            }
+        }
+        &.gl:hover {
+            background:linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335);
+        }
+    }
 }

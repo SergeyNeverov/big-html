@@ -24,6 +24,8 @@
         font-size: 12px;
         line-height: 16px;
         resize: none;
+        font-family: @font1;
+        margin-bottom: 40px;
         &::placeholder {
             color: #666666;
         }
@@ -32,9 +34,7 @@
             border-color: #666666;
         }
         &_white {
-            font-family: @font1;
             border-bottom: 2px solid #fff;
-            margin-bottom: 40px;
             color: #fff;
             &::placeholder {
                 color: fade(#fff, 40%);
@@ -62,6 +62,20 @@
             right: 0;
             top: 7px;
             z-index: 1;
+        }
+    }
+    &__link {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        color: @firstColor;
+        .transitionSecond;
+        text-decoration: none;
+        &:hover {
+            color: #000;
         }
     }
 }
@@ -122,6 +136,22 @@
         color: #fff;
         max-width: calc(~"100% - 48px");
     }
+    &.black {
+        margin-bottom: 16px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .check__text {
+            color: #000;
+
+        } 
+        .check__decore {
+            border: 1px solid #E0E0E0;
+            svg {
+                stroke: @firstColor;
+            }
+        }
+    }
 }
 .check__input:checked ~ .check__decore svg {
     opacity: 1;
@@ -176,9 +206,13 @@
         .transitionSecond;
         &:hover {
             color: @firstColor;
+            border: none;
         }
         &-decore {
            .button-svg;
+           svg {
+            .transitionSecond;
+           }
         }
         &.white {
             color: #fff;

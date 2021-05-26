@@ -19,7 +19,7 @@ header(class=`header header_product`)
                     })
                 .header__contacts.header__contacts_black-font 
                     a(href="tel:88002000619").header__phone 8 (800) 200-06-19
-                    .header__city
+                    .header__city(data-modal-open="city")
                         span Санкт-Петербург
                         +svg({
                             name: 'chevron'
@@ -27,7 +27,7 @@ header(class=`header header_product`)
                 .header__icons.header__icons_black-font
                     ul.header__icons-list
                         li.header__icons-item
-                            a(href="/").header__icons-link
+                            a(href="/" data-modal-open="login").header__icons-link
                                 +svg({
                                     name: 'user'
                                 })
@@ -49,7 +49,10 @@ header(class=`header header_product`)
                                     name: 'cart'
                                 })
                                 .header__icons-link-count=2
+                        li.header__icons-item.burger
+                            span.burger__line 
+                            span.burger__line          
     .container                                                      
         .header__content.header__content_inner
             +breadcrumbs(breadcrumbs)
-include ../blocks/mobile-menu/index                 
+    include ../blocks/mobile-menu/index                 

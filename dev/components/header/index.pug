@@ -31,7 +31,7 @@ header(class=`header header_dark header_index` style=`background-image: url(img/
                     })
                 .header__contacts
                     a(href="tel:88002000619").header__phone 8 (800) 200-06-19
-                    .header__city
+                    .header__city(data-modal-open="city")
                         span Санкт-Петербург
                         +svg({
                             name: 'chevron'
@@ -39,7 +39,7 @@ header(class=`header header_dark header_index` style=`background-image: url(img/
                 .header__icons
                     ul.header__icons-list
                         li.header__icons-item
-                            a(href="/").header__icons-link
+                            a(href="/" data-modal-open="login").header__icons-link
                                 +svg({
                                     name: 'user'
                                 })
@@ -61,7 +61,7 @@ header(class=`header header_dark header_index` style=`background-image: url(img/
                                     name: 'cart'
                                 })
                                 .header__icons-link-count=2
-                        li.header__icons-item.burger
+                        li.header__icons-item.burger.white
                             span.burger__line 
                             span.burger__line                                   
         .header__content
@@ -74,7 +74,7 @@ header(class=`header header_dark header_index` style=`background-image: url(img/
                         include ../blocks/header-search/index
                     .header__tabs
                         +tabs(tabsHeader)
-include ../blocks/mobile-menu/index                        
+    include ../blocks/mobile-menu/index                        
                 
 
                      

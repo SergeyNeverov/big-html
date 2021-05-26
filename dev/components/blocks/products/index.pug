@@ -17,8 +17,7 @@ mixin products(data)
                     if(data.banner)
                         //- баннер до товаров
                         li.products__item
-                            .banner-vertical(style="height: 100%; width: 100%; background: #333; display:flex; justify-content: center; align-items:center;")
-                                span(style="color: #fff; font-size: 48px;") Баннер
+                            .banner-vertical(style="height: 100%; width: 100%; background: #F7F7F7; display:flex; justify-content: center; align-items:center;")
                     each item in data.items
                         li.products__item
                             //- карточки товаров

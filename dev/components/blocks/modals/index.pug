@@ -1,3 +1,6 @@
+-
+    const cities = ['Москва', 'Санкт-Петербург', 'Воронеж', 'Волгоград', 'Екатеринбург', 'Казань', 'Красноярск', 'Новосибирск', 'Нижний Новгород', 'Омск', 'Пермь', 'Ростов-на-Дону', 'Самара', 'Челябинск', 'Уфа']
+
 .modal.modal-cart(data-modal="cart")
     a(href="javascript:void(0)" data-izimodal-close="close").modal__close
         +svg({
@@ -13,3 +16,141 @@
                 .modal__prices
                     .modal__old-price 29 990 ₽
                     .modal__price 25 990 ₽
+.modal.modal-login(data-modal="login")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        })                     
+    .modal__wrapper
+        p.modal__title.modal__title_big Регистрация
+        form.modal__form.form
+            .form__fields
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="NAME" placeholder="Имя")
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="PHONE" placeholder="Телефон" data-masked="phone")
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="EMAIL" placeholder="E-mail")
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="EMAIL" type="password" placeholder="Пароль")    
+            .form__actions.flex-wrap 
+                .form__actions-wrapper
+                    a(href="/").button.button_red.button_modal зарегистрироваться
+                    a(data-modal-open="auth" href="/").modal__link Уже есть аккаунт
+                .form__actions-check
+                    label.check.black
+                        input.check__input(type="checkbox" name="agree")
+                        span.check__decore
+                            +svg({
+                                name: 'check'
+                            })
+                        span.check__text Я хочу получать информацию о специальных предложениях и скидках
+                    label.check.black
+                        input.check__input(type="checkbox" name="agree")
+                        span.check__decore
+                            +svg({
+                                name: 'check'
+                            })
+                        span.check__text Нажимая на кнопку, я даю согласие на обработку персональных данных
+.modal.modal-login(data-modal="auth")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        })                     
+    .modal__wrapper
+        p.modal__title.modal__title_big Войти
+        form.modal__form.form
+            .form__fields
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="EMAIL" placeholder="E-mail")
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="EMAIL" type="password" placeholder="Пароль")
+                    a.field__link(data-modal-open="restore" href="/") Забыли пароль?    
+            .form__actions.flex-wrap 
+                .form__actions-wrapper.form__actions-wrapper_no-wrap
+                    a(href="/").button.button_red.button_modal.button_modal-small войти
+                    a(data-modal-open="login" href="/").modal__link Зарегистрироваться
+    .modal__bottom
+        span.modal__subtitle Войдите с помощью
+        .modal-social
+            ul.modal-social__list
+                li.modal-social__item 
+                    a(href="/").modal-social__link.vk 
+                        +svg({
+                            name: 'vk'
+                        })
+                li.modal-social__item 
+                    a(href="/").modal-social__link.fb 
+                        +svg({
+                            name: 'fb'
+                        })
+                li.modal-social__item 
+                    a(href="/").modal-social__link.gl 
+                        +svg({
+                            name: 'google'
+                        })  
+                li.modal-social__item 
+                    a(href="/").modal-social__link.ya 
+                        +svg({
+                            name: 'ya'
+                        })
+.modal.modal-login(data-modal="restore")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        })                     
+    .modal__wrapper
+        p.modal__title.modal__title_big Восстановить #[br]пароль
+        p.modal__text Введите e-mail, который вы указали при регистрации, мы вышлем письмо с инструкцией по восстановлению пароля
+        form.modal__form.form
+            .form__fields
+                .field
+                    span.field__required *
+                    input.field__input.fi.req.field__input(name="EMAIL" placeholder="E-mail")
+            .form__actions.flex-wrap 
+                .form__actions-wrapper
+                    a(href="/").button.button_red.button_modal Восстановить пароль
+.modal.modal-cart(data-modal="city")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        })                     
+    .modal__wrapper
+        .modal__titles
+            span.sup ваш город
+            span(data-city-change="").sub Санкт-петербург
+        .modal__buttons
+            a(href="/").button.button_red.button_modal.button_modal-small Да, верно
+            a(data-modal-open="city-change" href="/").modal__link Нет, выбрать другой
+.modal.modal-login(data-modal="city-change")
+    a(href="javascript:void(0)" data-izimodal-close="close").modal__close
+        +svg({
+            name: 'close'
+        })                     
+    .modal__wrapper
+        .modal__titles
+            span.sup ваш регион доставки
+            span(data-city-change="").sub Санкт-петербург
+        .modal__search
+            input(type="text" placeholder="Введите название города").modal__search-input
+            +svg({
+                name: 'search'
+            })
+        ul.modal__list
+            each city in cities
+                li.modal__item
+                    a(href="/").modal__link.big=city 
+                
+
+
+
+
+         
+
+

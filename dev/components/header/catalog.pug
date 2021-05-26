@@ -34,7 +34,7 @@ header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
                     })
                 .header__contacts
                     a(href="tel:88002000619").header__phone 8 (800) 200-06-19
-                    .header__city
+                    .header__city(data-modal-open="city")
                         span Санкт-Петербург
                         +svg({
                             name: 'chevron'
@@ -42,7 +42,7 @@ header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
                 .header__icons
                     ul.header__icons-list
                         li.header__icons-item
-                            a(href="/").header__icons-link
+                            a(href="/" data-modal-open="login").header__icons-link
                                 +svg({
                                     name: 'user'
                                 })
@@ -64,8 +64,18 @@ header(class=`header header_dark` style=`background-image: url(img/header.jpg)`)
                                     name: 'cart'
                                 })
                                 .header__icons-link-count=2
+                        li.header__icons-item.burger.white
+                            span.burger__line 
+                            span.burger__line          
     .container                                                      
         .header__content.header__content_inner
             +breadcrumbs(breadcrumbs)
-            h1.title.title_main.title_white.title_main-left Шины для #[br]спецтехники
-include ../blocks/mobile-menu/index                 
+            .header__content-wrapper
+                h1.title.title_main.title_main-left Шины для #[br]спецтехники
+                a(href="/").header__link.white
+                    .header__link-decore
+                        +svg({
+                            name: 'download'
+                        })
+                    span Скачать каталог PDF 
+    include ../blocks/mobile-menu/index                 

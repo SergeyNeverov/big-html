@@ -124,4 +124,32 @@ document.addEventListener('DOMContentLoaded',function(){
         $('.filter__wrapper').slideToggle();
     });
 
+    $('.burger').on('click', function(){
+        if($('.burger').hasClass('active')){
+            $('.burger').removeClass('active');
+            $('body').css({
+                'overflow-y': 'unset'
+            })
+        } else {
+            $('.burger').addClass('active');
+            $('body').css({
+                'overflow-y': 'hidden'
+            })
+            $('[data-first-level]').fadeIn(400);
+        }
+    });
+    $('.mobile-menu__close').on('click', function(){
+        $('.mobile-menu').fadeOut(400);
+        $('.burger').removeClass('active');
+        $('body').css({
+            'overflow-y': 'unset'
+        })
+    });
+    $('[data-submenu-open]').on('click', function(){
+        const id = $(this).data('submenu-open');
+        $('[data-submenu="'+id+'"]').fadeIn(400)
+    });
+    $('.mobile-menu__back').on('click', function(){
+        $('[data-submenu]').fadeOut(400);
+    });
 });

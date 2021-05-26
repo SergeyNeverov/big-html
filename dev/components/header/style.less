@@ -1,30 +1,20 @@
 .header {
-    padding: 48px 0 140px 0;
+    padding: 48px 0 80px 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    &_index {
+        padding-bottom: 140px;
+    }
     &_grey {
         background: #F7F7F7
+        
     }
     &_product {
         padding-bottom: 0;
     }
     &_dark {
         position: relative;
-        // z-index: 1;
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     right: 0; 
-        //     bottom: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 39.06%), linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #F7F7F7;
-        //     pointer-events: none;
-        //     z-index: 0;
-        // }
     }
     &__wrapper {
         display: flex;
@@ -41,6 +31,14 @@
         padding-top: 16%;
         &_inner {
             padding-top: 5%;
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            h1 {
+                margin: 0;
+            }
         }
     }
     &__select {
@@ -94,6 +92,8 @@
         align-items: center;
         margin-top: 8px;
         font-size: 12px;
+        cursor: pointer;
+        .transitionSecond;
         svg {
           width: 16px;
           height: 16px;
@@ -101,6 +101,13 @@
           stroke: @firstColor;
           transform: rotate(90deg);
           margin-left: 12px;
+          .transitionSecond;
+        }
+        &:hover {
+            color: #000;
+            svg {
+                stroke: #000;
+            }
         }
     }
     &__actions {
@@ -136,5 +143,43 @@
             color: #000;
         }
     }
- 
+    &__link {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+        .transitionSecond;
+        &:hover {
+            color: @firstColor;
+        }
+        &-decore {
+           .button-svg;
+           svg {
+               width: 24px;
+               height: 24px;
+               .transitionSecond;
+           }
+        }
+        &.white {
+            color: #fff;
+            svg {
+                stroke: #fff;
+            }
+        }
+        &:hover {
+            .header__link {
+                &-decore {
+                    background-color: @firstColor;
+                    border: 1px solid @firstColor;
+                    svg {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+    }
 }

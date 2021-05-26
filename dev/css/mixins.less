@@ -156,6 +156,13 @@
     }
 }
 
+.button_modal {
+    width: 280px;
+    padding: 20px;
+}
+.button_modal-small {
+    width: 160px;
+}
 .button_border {
     width: 280px;
     padding: 20px;
@@ -263,44 +270,45 @@
         stroke: #000;
     }
 }
-@supports(filter:url()){
-    .pages__link {
-        &:hover {
-            // filter:url(#glitch);
-            background: @firstColor;
-            svg{
-                stroke: #fff;
-            }
-            span {
-                color: #fff;
-            }
+
+.pages__link {
+    &:hover {
+        // filter:url(#glitch);
+        background: @firstColor;
+        svg{
+            stroke: #fff;
+        }
+        span {
+            color: #fff;
         }
     }
-    .section__link{
-        &:hover div{
-            // filter:url(#glitch);
-            background: @firstColor;
-            svg{
-                stroke: #fff;
-            }
+}
+.section__link{
+    &:hover div{
+        // filter:url(#glitch);
+        border-color: @firstColor;
+        background: @firstColor;
+        svg{
+            stroke: #fff;
         }
     }
-    .slider__arrow {
-        &:hover {
-            // filter:url(#glitch);
-            background: @firstColor;
-            svg{
-                stroke: #fff;
-            }
+}
+.slider__arrow {
+    &:hover {
+        // filter:url(#glitch);
+        background: @firstColor;
+        svg{
+            stroke: #fff;
         }
     }
-    .product-description__link {
-        &:hover div{
-            // filter:url(#glitch);
-            background: @firstColor;
-            svg{
-                stroke: #fff;
-            }
+}
+.product-description__link {
+    &:hover div{
+        // filter:url(#glitch);
+        
+        background: @firstColor;
+        svg{
+            stroke: #fff;
         }
     }
 }

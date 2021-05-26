@@ -11,10 +11,29 @@
         "Доставка и оплата", "Гарантия", "Лизинг и кредит"
     ]
     
+    const sublinks = [
+        {
+            title: 'Погрузчики',
+            list: ['Фронтальные погрузчики', 'Вилочные погрузчики', 'Экскаваторы-погрузчики', 'Дорожные мини-погрузчики', 'Ричстакеры']
+        },
+        {
+            title: 'Автотехника',
+            list: ['Автокраны', 'Автобетононасосы']
+        },
+        {
+            title: 'Дорожно-строительная техника',
+            list: ['Автогрейдеры', 'Бульдозеры', 'Катки дорожные', 'Экскаваторы', 'Стационарные бетононасосы', 'Асфальтоукладчики', 'Гусеничные краны', 'Стабилизаторы грунта', 'Проходческие комбайны', 'Фрезы дорожные', 'Буровые установки']
+        },
+        {
+            title: 'Другая спецтехника',
+            list: ['Стационарные бетононасосы', 'Бетонораспределительные стрелы']
+        }
+    ]
 
-.mobile-menu(style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; background: #fff;")
+
+.mobile-menu(data-first-level="")
     .mobile-menu__top
-        +logo(dark)
+        +logo('dark')
         a(href="javascript:void(0)").mobile-menu__close
             +svg({
                 name: 'close'
@@ -24,33 +43,73 @@
             ul.menu-nav__list
                 each link in topLinks
                     li.menu-nav__item
-                        a(href="javascript:void(0);" data-id="1").menu-nav__link=link
+                        a(href="javascript:void(0);" data-submenu-open="1").menu-nav__link=link
         .mobile-menu__actions
             a(href="tel:88002000619").header__phone.mobile-menu__phone 8 (800) 200-06-19
-                .header__city.mobile-menu__city
-                    span Санкт-Петербург
-                    +svg({
-                        name: 'chevron'
-                    })
+            .header__city.mobile-menu__city(data-modal-open="city")
+                span Санкт-Петербург
+                +svg({
+                    name: 'chevron'
+                })
             .mobile-menu__icons
                 a(href="/").header__icons-link.mobile-menu__icons-link
+                    .header__icons-link-count 2
                     +svg({
                         name: 'copy'
                     })
-                    .header__icons-link-count 2
                     span Сравнение
                 a(href="/").header__icons-link.mobile-menu__icons-link
+                    .header__icons-link-count 2
                     +svg({
                         name: 'bookmark'
                     })
-                    .header__icons-link-count 2
                     span Избранное
+        .mobile-menu__icons.mobile-show
+            a(href="/").header__icons-link.mobile-menu__icons-link
+                .header__icons-link-count 2
+                +svg({
+                    name: 'copy'
+                })
+                span Сравнение
+            a(href="/").header__icons-link.mobile-menu__icons-link
+                .header__icons-link-count 2
+                +svg({
+                    name: 'bookmark'
+                })
+                span Избранное        
     .mobile-menu__bottom
         nav.menu-nav-bottom
             ul.menu-nav-bottom__list
                 each link in bottomLinks1
                     li.menu-nav-bottom__item 
-                       a(href="").menu-nav-bottom__link=link 
+                       a(href="").menu-nav-bottom__link=link
+            ul.menu-nav-bottom__list
+                each link in bottomLinks2
+                    li.menu-nav-bottom__item 
+                       a(href="").menu-nav-bottom__link=link            
+.mobile-menu(data-submenu="1").sub
+    .mobile-menu__top
+        a(href="javascript:void(0);" data-submenu-close="").mobile-menu__back
+            +svg({
+                name: 'chevron'
+            }) 
+            span Назад
+        a(href="javascript:void(0)").mobile-menu__close
+            +svg({
+                name: 'close'
+            })
+    .mobile-menu__center.flex-wrap.mt-90 
+        each item in sublinks
+            nav.menu-nav-bottom.half
+                .menu-nav-bottom__block
+                    p.menu-nav-bottom__title=item.title
+                    ul.menu-nav-bottom__list
+                        each link in item.list
+                            li.menu-nav-bottom__item 
+                                a(href="").menu-nav-bottom__link=link   
+
+    
+
 
 
 
